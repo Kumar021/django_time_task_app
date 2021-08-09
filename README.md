@@ -2,18 +2,22 @@
 
 
 ## Asynchronous Tasks With Django and Celery 
-
+```
 #1 why we use celery and Redis with django??
 If a long process is part of your application's workflow, you can use Celery to execute that process in the background, as resources become available, so that your application can continue to respond to client requests.
 
-And 
+```
+#### And 
 
+```
 This extension enables you to store the periodic task schedule in the database.
 
 The periodic tasks can be managed from the Django Admin interface, where you can create, edit and delete periodic tasks and how often they should run.
+```
 
-#2 Project Setup
-##1 Pacakages Requirements 
+## #2 Project Setup
+```
+## 1 Pacakages Requirements 
 	'''
 	Python
 	Django
@@ -24,8 +28,9 @@ The periodic tasks can be managed from the Django Admin interface, where you can
 	'''
 	Project Templates Ready to use
 	https://github.com/Kumar021/django_time_task_app/blob/master/code/requirements.txt 
-
-##2 How to use my project templates(https://github.com/Kumar021/django_time_task_app)
+```
+```
+## 2 How to use my project templates(https://github.com/Kumar021/django_time_task_app)
 	#1 Clone proejct
 	#2 Install Python & Create Virtual Environments and activate
 	#3 Install redis
@@ -34,6 +39,8 @@ The periodic tasks can be managed from the Django Admin interface, where you can
 	#6 Start django server - python manage.py runserver 
 	#7 Let's go to django admin localhost:8080/admin.
 	#8 Let's make a crontab Crontab > Add crontab
+	![alt text](https://github.com/Kumar021/django_time_task_app/blob/master/code/img/3dd9pno3z8miartnckan.png?raw=true)
+	![alt text](https://github.com/Kumar021/django_time_task_app/blob/master/code/img/3dd9pno3z8miartnckan.png?raw=true)
 	#9 Let's create a crontab .Here I created one
 	#10 Let's create a periodic task
 	Click Periodic tasks > Add. Create a new name of your choice. Find send_notification task that we have created up there
@@ -50,7 +57,7 @@ The periodic tasks can be managed from the Django Admin interface, where you can
 	If you want to learn more about django_celery_beat
 	https://django-celery-beat.readthedocs.io/en/latest/
 
-
+```
 
 	
 

@@ -5,12 +5,23 @@ from django.apps import apps
 # from .models import PriceLookupEvent
 from .scraper import StockTickerScraper
 
-
 @shared_task
-def hello_world(num=10):
+def add_num(num=2):
     time.sleep(num)
-    print(f"Hello world {num}")
+    print("add number num")
 
+
+
+# @shared_task
+# def hello_world(num=10):
+#     time.sleep(num)
+#     print(f"Hello world {num}")
+
+
+# hello_world.delay(num=1)
+# hello_world.delay(num=2)
+# hello_world.delay(num=3)
+# hello_world.apply_async(kwargs={'num': 4}, countdown=10)
 
 @shared_task
 def perform_scrape(ticker='AAPL', service='echo'):

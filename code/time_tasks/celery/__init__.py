@@ -1,6 +1,7 @@
 # time_tasks/celery/__init__.py
 from __future__ import absolute_import, unicode_literals
 import os
+# from datetime import timedelta
 
 from celery import Celery
 from celery.schedules import crontab
@@ -31,9 +32,21 @@ app.conf.beat_scheduler = 'django_celery_beat.schedulers.DatabaseScheduler'
 
 # app.conf.beat_schedule = {
 #     # Executes every Monday morning at 7:30 a.m.
-#     'add-every-monday-morning': {
+#     # 'add-every-monday-morning': {
+#     #     'task': 'stocks.tasks.perform_scrape',
+#     #     # 'schedule': crontab(hour=7, minute=30, day_of_week=1),
+#     #     'kwargs': {"ticker": "GOOG", "service": "business_insider"},
+#     # },
+#     'add-every-morning': {
 #         'task': 'stocks.tasks.perform_scrape',
-#         'schedule': crontab(hour=7, minute=30, day_of_week=1),
+#         'schedule': crontab(minute='*/3'),
 #         'kwargs': {"ticker": "GOOG", "service": "business_insider"},
 #     },
+#     'add-every-3-minute': {
+#         'task': 'stocks.tasks.add_num',
+#         'schedule': crontab(minute='*/3', day_of_week='*')
+#     },
+
 # }
+
+

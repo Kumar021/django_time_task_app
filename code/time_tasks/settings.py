@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '&=th!0qi1q85ge%@7@$n&4sbvl!u*e^y$_bsd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("IS_PROD") != "true" # IS_PROD = FALSE
 print("DEBUG", DEBUG)
-ALLOWED_HOSTS = ['cfe-time-tasks.herokuapp.com', '.cfe.sh']
+ALLOWED_HOSTS = ['cfe-time-tasks.herokuapp.com', '.cfe.sh', 'localhost']
 
 if DEBUG:
     ALLOWED_HOSTS.append('127.0.0.1')
@@ -117,7 +117,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
